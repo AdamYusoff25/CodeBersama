@@ -1,0 +1,83 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-div, .right-div {
+    height: 800px;
+    border: 1px solid black; /* Optional: Add border for better visualization */
+}
+
+.left-div {
+    background: #B3E2B7;
+    overflow: auto;
+}
+
+.right-div {
+    background: blue;
+    display: flex;
+    flex-direction: column;
+}
+
+#runbtn {
+    background-color: #04AA6D;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    padding: 6px 25px;
+    margin-top: 4px;
+    border-radius: 5px;
+}
+
+.btnseterusnya {
+    background-color: #04AA6D;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    padding: 6px 25px;
+    margin-top: 4px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#editor {
+    margin: 0;
+    height: 1000px; /* Adjust the height as needed */
+}
+
+.CodeMirror {
+    height: 500px;
+}
+
+#result_containen {
+    background-color: black;
+    flex: 1;
+    overflow: auto;
+}
+#result {
+    color: antiquewhite;
+    padding: 10px;
+}
+.codearea {
+    flex: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+p{
+    white-space: pre-line;
+}
+
+.learning_envirement {
+    margin: 30px;
+    background-color: white;
+    padding: 20px;
+}
+
+.learning_envirement h1 {
+    padding-bottom: 20px;
+}
+
+.learning_envirement p {
+    font-size: 20px;
+}

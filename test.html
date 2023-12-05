@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2A7C6F;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 125px;
+    }
+
+    .logo {
+      width: 200px; /* Adjust the size as needed */
+      height: 200px; /* Adjust the size as needed */
+      margin-bottom: 10px;
+    }
+
+    .login-container h1 {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    .login-container button {
+      background-color: #2A7C6F;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .signup-link {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbarContainer = document.getElementById("navbar-container");
+            navbarContainer.innerHTML = '<iframe src="navbar.html" frameborder="0" scrolling="no"></iframe>';
+        });
+    </script>
+
+  <div class="login-container">
+    <img class="logo" src="/images/umplogo.png" alt="Logo">
+    <h1>
+        CodeBersama
+    </h1>
+    <form action="/login" method="post">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="signup-link">Don't have an account? <a href="/signup">Sign up</a></p>
+  </div>
+</body>
+</html>

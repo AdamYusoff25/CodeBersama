@@ -1,0 +1,152 @@
+  
+  .kadkandungans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .kandungan {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .divkandungan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .divkandungan h2 {
+    color: white;
+  }
+  
+  .kadkandungan {
+    text-align: center;
+  }
+  
+  .kadkandungan img,
+  .ujian img,
+  .komuniti img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+  }
+  
+  .img-caption {
+    margin: 0; 
+    font-size: 20px;
+    color: white;
+  }
+  
+
+body {
+  background-color: #2A7C6F;
+}
+
+.introbackground {
+  background-color: #B3E2B7;
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.wrapper {
+  width: 1100px;
+  margin: 0 auto;
+  align-content: center;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.JavaScript-logo {
+  height: auto;
+  width: 75px;
+  padding-left: 10px;
+}
+
+.intro {
+  width: 1100px;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 50px;
+}
+
+.intro h1 {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.grid-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Adjust the gap as needed */
+  padding-bottom: 40px;
+}
+
+.grid-list li {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gridtitle {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.wrapper h1 {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 72px;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.wrapper p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 20px;
+  color: white;
+  line-height: 30px;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  width: 200px; /* Set your desired width */
+  padding: 10px; /* Add padding if needed */
+  background-color: #2980B9; /* Set your desired background color */
+  color: #ffffff; /* Set your desired text color */
+  text-decoration: none;
+  border-radius: 5px; /* Optional: Add rounded corners */
+  margin-top: 20px; /* Optional: Add top margin for spacing */
+  text-align: center;
+  font-size: 25px;
+}
+
+

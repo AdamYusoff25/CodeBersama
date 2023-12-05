@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CodeMirror</title>
+    <link rel="stylesheet" href="/codemirror-5.65.16/lib/codemirror.css">
+    <link rel="stylesheet" href="/codemirror-5.65.16/theme/dracula.css">
+    <script src="/codemirror-5.65.16/lib/codemirror.js"></script>
+    <script src="/codemirror-5.65.16/mode/xml/xml.js"></script>
+    <script src="/codemirror-5.65.16/mode/javascript/javascript.js"></script>
+    <script src="/codemirror-5.65.16/mode/htmlmixed/htmlmixed.js"></script>
+
+    <link rel="stylesheet" href="/codeenvistyle.css" />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-div">
+            <div class="learning_envirement">
+                <h1 class="subject_title">Mesej did dalam Javascript</h1>
+                <p class="subject_content">Ucapan adalah baris-baris kod yang akan diabaikan secara sengaja oleh JavaScript. Ucapan merupakan cara
+                    yang baik untuk meninggalkan catatan kepada diri sendiri dan kepada orang lain yang kelak perlu mencari tahu apa yang kod tersebut lakukan.
+                    <br>
+                    Terdapat dua cara untuk menulis ucapan dalam JavaScript:
+                    <br>
+                    Menggunakan // akan memberitahu JavaScript untuk mengabaikan sisa teks pada baris semasa ini. Ini merupakan ucapan dalam talian:
+                    <br>
+                    <code>// This is an in-line comment.</code>
+                    <br>
+                    Anda boleh membuat komen berbaris-baris yang bermula dengan /* dan berakhir dengan */. Ini adalah komen berbaris-baris:
+                    <br>
+                    <code>/* Ini adalah komen berbaris-baris */</code>
+                    <br>
+                    CATATAN: Semasa anda menulis kod, anda seharusnya secara berkala menambah komen untuk menjelaskan fungsi 
+                    bahagian-bahagian kod anda. Komen yang baik dapat membantu menyampaikan maksud kod anda—baik untuk orang 
+                    lain mahupun untuk diri anda sendiri pada masa akan datang.
+                </p>
+            </div>
+        </div>
+
+        <div class="right-div">
+            <div class="codearea">
+                <textarea id="editor" class="editor">
+console.log("cuba gune // di bawah, apabila kod di run, masej itu akan diabaikan")
+console.log("dah tidak keluar sebagai output.")
+console.log("Hanya perkataan didalam console.log akan digunnakan.")
+//(tulis sesusatu didalam ruang ini). 
+                </textarea>
+            </div>
+            <div>
+                <button id="runbtn" class="runbtn" onclick ="runCode()">Run Code</button>
+                <a href="kelas2.html"  class="btnseterusnya">Seterusnaya</a>
+            </div>
+            <div id="result_containen">
+                <h3>Result:</h3>
+                <div id="result"></div>
+            </div>
+            <script>
+                var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+                    mode: "javascript",
+                    theme: "dracula",
+                    height: "500px",
+                    lineNumbers: true
+                });
+            
+                function runCode() {
+                    var code = editor.getValue();
+            
+                    // Override console.log to capture the output
+                    var logs = [];
+                    var originalLog = console.log;
+                    console.log = function (message) {
+                        logs.push(message);
+                    };
+            
+                    try {
+                        // Use eval to execute the JavaScript code
+                        var result = eval(code);
+            
+                        // Restore the original console.log
+                        console.log = originalLog;
+            
+                        // Display the captured logs in the result div
+                        document.getElementById('result').innerHTML = logs.join('<br>');
+                        document.getElementById('result').innerHTML += "<br>" + (result !== undefined ? result : "Code executed successfully");
+                    } catch (error) {
+                        document.getElementById('result').innerHTML = `<span style="color: red;">Error: ${error}</span>`;
+                        console.error(error);
+            
+                        // Restore the original console.log in case of an error
+                        console.log = originalLog;
+                    }
+                }
+            </script>
+            
+            
+        </div>
+    </div>
+</body>
+</html>

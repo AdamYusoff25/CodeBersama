@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CodeMirror</title>
+    <link rel="stylesheet" href="/codemirror-5.65.16/lib/codemirror.css">
+    <link rel="stylesheet" href="/codemirror-5.65.16/theme/dracula.css">
+    <script src="/codemirror-5.65.16/lib/codemirror.js"></script>
+    <script src="/codemirror-5.65.16/mode/xml/xml.js"></script>
+    <script src="/codemirror-5.65.16/mode/javascript/javascript.js"></script>
+    <script src="/codemirror-5.65.16/mode/htmlmixed/htmlmixed.js"></script>
+
+    <link rel="stylesheet" href="/codeenvistyle.css" />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-div">
+            <div class="learning_envirement">
+                <h1 class="subject_title">Menyimpan Nilai dengan Operator Tugasan</h1>
+                <p class="subject_content">
+                    Dalam JavaScript, anda boleh menyimpan nilai dalam pembolehubah dengan menggunakan operator pemberian (=).
+                    <br>
+                    <p>Contoh:          PembolehubahSaya=5;</p>
+                    <br>
+                    <p>Ini memberikan nilai Nombor 5 kepada PembolehubahSaya.</p>
+                    <br>
+                    <p>Jika terdapat sebarang pengiraan di sebelah kanan operator =, pengiraan tersebut dilakukan sebelum nilai diberikan kepada pembolehubah di sebelah kiri operator.</p>
+                    <br>
+                    <p>var PembolehubahAwak; <br>PembolehubahAwak=5;
+                    </p>
+                    <br>
+                    <p>Pertama, kod ini membuat pembolehubah bernama PembolehubahAwak. Kemudian, kod memberikan nilai 5 kepadanya. Sekarang, jika PembolehubahAwak muncul lagi dalam kod, program akan menganggapnya sebagai 5</p>
+                    <br>
+
+                </p>
+            </div>
+        </div>
+
+        <div class="right-div">
+            <div class="codearea">
+                <textarea id="editor" class="editor">
+var pembolehubahSaya = ;    // Beri nilai ke pembolehubahSaya
+var pembolehubahAwak = ;   // Beri nilai ke pembolehubahAwak
+var pembolehubahKita = pembolehubahSaya + pembolehubahAwak;
+                    
+console.log("pembolehubahSaya = " + pembolehubahSaya);
+console.log("pembolehubahAwak = " + pembolehubahAwak);
+console.log("pembolehubahKita = " + pembolehubahKita);
+
+//Run Code dan lihat nilai yang diberi akan digunakan untuk mengira pembolehubahKita
+                </textarea>
+            </div>
+            <div>
+                <button id="runbtn" class="runbtn" onclick ="runCode()">Run Code</button>
+                <a href="#"  class="btnseterusnya">Seterusnaya</a>
+            </div>
+            <div id="result_containen">
+                <h3>Result:</h3>
+                <div id="result"></div>
+            </div>
+            <script>
+                var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+                    mode: "javascript",
+                    theme: "dracula",
+                    height: "500px",
+                    lineNumbers: true
+                });
+            
+                function runCode() {
+                    var code = editor.getValue();
+            
+                    // Override console.log to capture the output
+                    var logs = [];
+                    var originalLog = console.log;
+                    console.log = function (message) {
+                        logs.push(message);
+                    };
+            
+                    try {
+                        // Use eval to execute the JavaScript code
+                        var result = eval(code);
+            
+                        // Restore the original console.log
+                        console.log = originalLog;
+            
+                        // Display the captured logs in the result div
+                        document.getElementById('result').innerHTML = logs.join('<br>');
+                        document.getElementById('result').innerHTML += "<br>" + (result !== undefined ? result : "Code executed successfully");
+                    } catch (error) {
+                        document.getElementById('result').innerHTML = `<span style="color: red;">Error: ${error}</span>`;
+                        console.error(error);
+            
+                        // Restore the original console.log in case of an error
+                        console.log = originalLog;
+                    }
+                }
+            </script>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
