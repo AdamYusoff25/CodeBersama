@@ -3,6 +3,15 @@
     grid-template-columns: 1fr 1fr;
 }
 
+code {
+    background-color: #2a2a40;
+    border-radius: 0;
+    color: #dfdfe2;
+    overflow-wrap: anywhere;
+    padding: 1px 4px;
+    border: 1px solid #858591;
+}
+
 .left-div, .right-div {
     height: 800px;
     border: 1px solid black; /* Optional: Add border for better visualization */
@@ -42,11 +51,12 @@
 
 #editor {
     margin: 0;
-    height: 1000px; /* Adjust the height as needed */
+    height: 1000px;
 }
 
 .CodeMirror {
     height: 500px;
+    font-size: 20px;
 }
 
 #result_containen {
@@ -66,6 +76,8 @@
 
 p{
     white-space: pre-line;
+    font-family: sans-serif, Laro;
+
 }
 
 .learning_envirement {
@@ -80,4 +92,25 @@ p{
 
 .learning_envirement p {
     font-size: 20px;
+}
+
+.codeblock  {
+    background: #0a0a23;
+    margin: 0.5em 0;
+    overflow: auto;
+    padding: 1em;
+    text-align: left;
+    height: fit-content;
+}
+
+.codeblockinside {
+    color: #608b4e;
+    display: block;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.subject_content pre {
+    font-size: 20px;
+    margin: 0;
 }

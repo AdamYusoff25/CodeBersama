@@ -30,23 +30,27 @@
     <div class="container">
         <div class="left-div">
             <div class="learning_envirement">
-                <h1 class="subject_title">Menetapkan Nilai Satu Pembolehubah kepada Pembolehubah Lain</h1>
+                <h1 class="subject_title">Terokai Perbezaan Antara kata kunci var let</h1>
                 <p class="subject_content">
-                    Selepas nilai ditetapkan kepada sebuah pembolehubah menggunakan operator tugasan, anda boleh menetapkan nilai pembolehubah tersebut kepada pembolehubah lain menggunakan operator tugasan.
+                    Salah satu masalah terbesar dengan mengisytiharkan pembolehubah dengan kata kunci var ialah anda boleh dengan mudah menulis ganti pengisytiharan pembolehubah:
+                <pre class="codeblock">
+                    <span class="codeblockinside">var PembolehubahSaya;
+var nama = "Adam";
+var nama = "Yusoff";
+console.log(nama);</span>
+                </pre>
+                <p class="subject_content">
+                    Dalam kod di atas, pembolehubah <code>nama</code> pada asalnya diisytiharkan sebagai <code>Adam</code>, dan kemudiannya diatasi untuk menjadi <code>Yusoff</code>. Konsol kemudian memaparkan rentetan <code>Yusoff</code>.
+                    <br>
+                    Dalam aplikasi kecil, anda mungkin tidak menghadapi masalah seperti ini. Tetapi apabila pangkalan kod anda menjadi lebih besar, anda mungkin secara tidak sengaja menulis ganti pemboleh ubah yang anda tidak berniat. Kerana tingkah laku ini tidak membuang ralat, mencari dan membetulkan pepijat menjadi lebih sukar.
+                    <br>
+                    <code>let</code> dapat mengatasi masalah ini. jika <code>let</code> digunakan sebalik <code>var</code>, ia akan mengakibatkan ralat.
                     <pre class="codeblock">
                         <span class="codeblockinside">var PembolehubahSaya;
-PembolehubahSaya = 5;
-var PembolehUbahAwak;
-PembolehUbahAwak = PembolehubahSaya;</span>
+let nama = "Adam";
+let nama = "Yusoff";
+console.log(nama);</span>
                     </pre>
-                    </p>
-                <p class="subject_content">
-                    Di atas mendeklarasikan pembolehubah <code>PembolehUbahSaya</code> tanpa nilai, kemudian menetapkannya nilai <code>5</code>. Seterusnya, pembolehubah bernama <code>PembolehubahAwak</code> dideklarasikan tanpa nilai.
-                    <br>Kemudian, kandungan <code>PembolehubahSaya</code> (iaitu 5) ditetapkan kepada pembolehubah <code>PembolehUbahAwak</code>. Sekarang, <code>pembolehubahAwak</code> juga mempunyai nilai <code>5</code>.
-                </p>
-                    <p> Cuba tetapkan kandungan pembolehubah <code>a</code> kepada pembolehubah <code>b</code></p>
-                    <br>
-
                 </p>
             </div>
         </div>
@@ -54,21 +58,19 @@ PembolehUbahAwak = PembolehubahSaya;</span>
         <div class="right-div">
             <div class="codearea">
                 <textarea id="editor" class="editor">
-// Penetapan Awal
-var a;
-a = 7;
-var b;
-console.log(b); //print b. jika kod yg ditulis betul, hasil 7 akan kelua                   
-// Ubah kod hanya di bawah baris ini sahaja
+var nama = "Ali";
+var nama = "Nasi";
+console.log(nama);
 
+// tukarkan var kepada let. awak patut dapat error atau ralat
 
                     
                 </textarea>
             </div>
             <div>
                 <button id="runbtn" class="runbtn" onclick ="runCode()">Run Code</button>
-                <a href="kelas4.html"  class="btnseterusnya">Seterusnaya</a>
-                <a href="kelas2.html" class="btnseterusnya">Kembali</a>
+                <a href="kelas7.html"  class="btnseterusnya">Seterusnaya</a>
+                <a href="kelas5.html" class="btnseterusnya">Kembali</a>
                 <a href="/kursus.html" class="btnseterusnya">Kursus</a>
             </div>
             <div id="result_containen">

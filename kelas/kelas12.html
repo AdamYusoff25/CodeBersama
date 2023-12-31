@@ -30,45 +30,37 @@
     <div class="container">
         <div class="left-div">
             <div class="learning_envirement">
-                <h1 class="subject_title">Menetapkan Nilai Satu Pembolehubah kepada Pembolehubah Lain</h1>
+                <h1 class="subject_title">Mengunakan tanda kutipan di dalam String</h1>
                 <p class="subject_content">
-                    Selepas nilai ditetapkan kepada sebuah pembolehubah menggunakan operator tugasan, anda boleh menetapkan nilai pembolehubah tersebut kepada pembolehubah lain menggunakan operator tugasan.
+                    Apabila anda mentakrifkan String, anda mesti bermula dan berakhir dengan petikan tunggal atau berganda. Apa yang berlaku apabila anda memerlukan petikan literal: " atau ' di dalam rentetan anda?
+                <br>
+                Dalam JavaScript, anda boleh melarikan diri petikan daripada menganggapnya sebagai akhir petikan rentetan dengan meletakkan garis mundur <code>\</code> di hadapan petikan.
+                <br>
+                    Contoh:
                     <pre class="codeblock">
-                        <span class="codeblockinside">var PembolehubahSaya;
-PembolehubahSaya = 5;
-var PembolehUbahAwak;
-PembolehUbahAwak = PembolehubahSaya;</span>
+                        <span class="codeblockinside">const sampelStr = "Adam berkata, \"Yusoff suka bermain bola sepak\".";
+                        </span>
                     </pre>
-                    </p>
-                <p class="subject_content">
-                    Di atas mendeklarasikan pembolehubah <code>PembolehUbahSaya</code> tanpa nilai, kemudian menetapkannya nilai <code>5</code>. Seterusnya, pembolehubah bernama <code>PembolehubahAwak</code> dideklarasikan tanpa nilai.
-                    <br>Kemudian, kandungan <code>PembolehubahSaya</code> (iaitu 5) ditetapkan kepada pembolehubah <code>PembolehUbahAwak</code>. Sekarang, <code>pembolehubahAwak</code> juga mempunyai nilai <code>5</code>.
-                </p>
-                    <p> Cuba tetapkan kandungan pembolehubah <code>a</code> kepada pembolehubah <code>b</code></p>
-                    <br>
-
-                </p>
+                <p class="subject_content">Ini memberi isyarat kepada JavaScript bahawa petikan berikut bukanlah penghujung rentetan, sebaliknya harus muncul di dalam rentetan itu sendiri. Jadi jika anda mencetak ini pada konsol, anda akan mendapat:</p>
+                <pre class="codeblock">
+                    <span class="codeblockinside">Alan kata, "Peter sedang mempelajari JavaScript".
+                    </span>
+                </pre>
             </div>
         </div>
 
         <div class="right-div">
             <div class="codearea">
                 <textarea id="editor" class="editor">
-// Penetapan Awal
-var a;
-a = 7;
-var b;
-console.log(b); //print b. jika kod yg ditulis betul, hasil 7 akan kelua                   
-// Ubah kod hanya di bawah baris ini sahaja
-
-
-                    
+//betulkan kod di bawah
+const ContohString = "Ali kata, "Yusoff tidak reti main bola".";
+console.log(ContohString);
                 </textarea>
             </div>
             <div>
                 <button id="runbtn" class="runbtn" onclick ="runCode()">Run Code</button>
-                <a href="kelas4.html"  class="btnseterusnya">Seterusnaya</a>
-                <a href="kelas2.html" class="btnseterusnya">Kembali</a>
+                <a href="kelas13.html"  class="btnseterusnya">Seterusnaya</a>
+                <a href="kelas11.html" class="btnseterusnya">Kembali</a>
                 <a href="/kursus.html" class="btnseterusnya">Kursus</a>
             </div>
             <div id="result_containen">

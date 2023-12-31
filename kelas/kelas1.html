@@ -36,13 +36,20 @@
                     <br>
                     Terdapat dua cara untuk menulis ucapan dalam JavaScript:
                     <br>
-                    Menggunakan // akan memberitahu JavaScript untuk mengabaikan sisa teks pada baris semasa ini. Ini merupakan ucapan dalam talian:
-                    <br>
-                    <code>// This is an in-line comment.</code>
-                    <br>
-                    Anda boleh membuat komen berbaris-baris yang bermula dengan /* dan berakhir dengan */. Ini adalah komen berbaris-baris:
-                    <br>
-                    <code>/* Ini adalah komen berbaris-baris */</code>
+                    Menggunakan <code>//</code> akan memberitahu JavaScript untuk mengabaikan sisa teks pada baris semasa ini. Ini merupakan komen satu baris:
+                
+                    Anda boleh membuat komen berbaris-baris yang bermula dengan <code>/*</code> dan berakhir dengan <code>*/</code>. Ini adalah komen berbaris-baris:
+
+                    <pre class="codeblock">
+                        <span class="codeblockinside">//ini adalah komen satu baris</span>
+                    </pre>
+
+                    <pre class="codeblock">
+                        <span class="codeblockinside">
+/* Ini adalah
+komen
+berbaris-baris */</span>
+                    </pre>
                     <br>
                     CATATAN: Semasa anda menulis kod, anda seharusnya secara berkala menambah komen untuk menjelaskan fungsi 
                     bahagian-bahagian kod anda. Komen yang baik dapat membantu menyampaikan maksud kod anda—baik untuk orang 
@@ -63,6 +70,8 @@ console.log("Hanya perkataan didalam console.log akan digunnakan.")
             <div>
                 <button id="runbtn" class="runbtn" onclick ="runCode()">Run Code</button>
                 <a href="kelas2.html"  class="btnseterusnya">Seterusnaya</a>
+                <a href="/index.html" class="btnseterusnya">Kembali</a>
+                <a href="/kursus.html" class="btnseterusnya">Kursus</a>
             </div>
             <div id="result_containen">
                 <h3>Result:</h3>
@@ -74,6 +83,7 @@ console.log("Hanya perkataan didalam console.log akan digunnakan.")
                     theme: "dracula",
                     height: "500px",
                     lineNumbers: true
+                    
                 });
             
                 function runCode() {
